@@ -9,6 +9,7 @@ import javax.transaction.TransactionManager;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
+import org.hibernate.engine.jdbc.env.spi.JdbcEnvironment;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -68,6 +69,7 @@ public class RootConfig implements ApplicationContextAware{
 	@Bean("transactionManager")
 	public HibernateTransactionManager transactionManager(SessionFactory sessionFactory) {
 		HibernateTransactionManager htm=new HibernateTransactionManager(sessionFactory);
+
 		return htm;
 	}
 

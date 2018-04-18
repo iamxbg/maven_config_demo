@@ -25,9 +25,10 @@
 	<util:properties id="hibernate_properties" location="classpath:hibernate.properties"></util:properties>
 	<util:properties id="jdbc_properties" location="classpath:jdbc.properties"></util:properties>
 
+
 	<!-- DataSource -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" 
-		p:username="#{jdbc_properties.username}"
+		p:username="#{jdbc_properties.username}" 
 		p:password="#{jdbc_properties.password}"
 		p:url="#{jdbc_properties.url}"
 		p:driverClassName="#{jdbc_properties.driverClassName}"

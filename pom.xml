@@ -11,6 +11,7 @@
   	<junit.version>4.12</junit.version>
   	<javaee.web.version>7.0</javaee.web.version>
   	<log4j.version>2.10.0</log4j.version>
+  	<hibernate.version>5.2.10.Final</hibernate.version>
   </properties>
   
   <!-- set JDK version -->
@@ -163,7 +164,13 @@
 		<dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-core</artifactId>
-		    <version>5.2.10.Final</version>
+		    <version>${hibernate.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-c3p0</artifactId>
+		    <version>${hibernate.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2 -->
@@ -192,6 +199,14 @@
 		    <artifactId>mysql-connector-java</artifactId>
 		    <version>5.1.40</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis</artifactId>
+		    <version>3.4.5</version>
+		</dependency>
+		
 				
 		
   	</dependencies>

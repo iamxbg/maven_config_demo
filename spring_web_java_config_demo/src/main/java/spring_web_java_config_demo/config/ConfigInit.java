@@ -1,7 +1,8 @@
 package spring_web_java_config_demo.config;
 
+import javax.servlet.Filter;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 
 public class ConfigInit  extends AbstractAnnotationConfigDispatcherServletInitializer{
 
@@ -22,5 +23,16 @@ public class ConfigInit  extends AbstractAnnotationConfigDispatcherServletInitia
 		// TODO Auto-generated method stub
 		return new String[] {"/"};
 	}
+
+	@Override
+	protected Filter[] getServletFilters() {
+		// TODO Auto-generated method stub
+		//return super.getServletFilters();
+		return new Filter[] { new CharacterEncodingFilter("UTF-8", true)};
+	}
+
+
+	
+	
 
 }
