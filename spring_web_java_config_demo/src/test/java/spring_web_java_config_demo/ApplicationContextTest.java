@@ -1,5 +1,8 @@
 package spring_web_java_config_demo;
 
+import javax.annotation.Resource;
+
+import org.hibernate.SessionFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +20,9 @@ import spring_web_java_config_demo.config.WebConfig;
 public class ApplicationContextTest implements ApplicationContextAware{
 
 	private ApplicationContext ac;
+	
+	@Resource
+	private SessionFactory sf;
 	
 	@Test
 	public void testDataSourceNotNull() {
@@ -37,6 +43,12 @@ public class ApplicationContextTest implements ApplicationContextAware{
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		// TODO Auto-generated method stub
 		this.ac=applicationContext;
+	}
+	
+	@Test
+	public void testSessionFactoryNotNull() {
+		
+		Assert.assertNotNull(sf);
 	}
 	
 }
