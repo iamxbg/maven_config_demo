@@ -1,6 +1,7 @@
 package spring_web_java_config_demo.config;
 
 import java.security.spec.DSAGenParameterSpec;
+import java.sql.Connection;
 import java.sql.Driver;
 import java.util.Properties;
 
@@ -52,7 +53,9 @@ public class RootConfig implements ApplicationContextAware{
 			sf.setDataSource(dataSource);
 			sf.setPackagesToScan("spring_web_java_config_demo.entity");
 			
-			Properties props=ac.getResource(arg0)
+			
+			org.hibernate.ConnectionAcquisitionMode.IMMEDIATELY
+			Properties props=ac.getResource()
 			
 			sf.setHibernateProperties(hibernateProperties);
 			
