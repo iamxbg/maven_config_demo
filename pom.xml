@@ -215,7 +215,7 @@
   
   
   <modules>
-  	<module>sping_web_xml_config_demo</module>
+  	<module>spring_web_xml_config_demo</module>
   	<module>spring_web_java_config_demo</module>
 </modules>
 </project>
