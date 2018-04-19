@@ -1,5 +1,11 @@
 package spring_web_xml_config_demo.entity;
 
+/**
+ * hibernate entity 
+ * 
+ * shouldn't set the setId() method
+ * 
+ */
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

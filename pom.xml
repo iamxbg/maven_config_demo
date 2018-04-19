@@ -14,8 +14,19 @@
   	<hibernate.version>5.2.10.Final</hibernate.version>
   </properties>
   
+  
+  
   <!-- set JDK version -->
   <build>
+  	<pluginManagement>
+  		<plugins>
+	  		<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.5</version>
+			</plugin>
+  		</plugins>
+  	</pluginManagement>
   	<plugins>
   		<plugin>
   			<artifactId>maven-compiler-plugin</artifactId>
@@ -25,14 +36,7 @@
   				<target>${java.version}</target>
   			</configuration>
   		</plugin>
-  		
-  		<plugin>
-  			<artifactId>maven-clean-plugin</artifactId>
-  			<version>3.1.0</version>
-  			<configuration>
-  				
-  			</configuration>
-  		</plugin>
+
   	</plugins>
   </build>
   
@@ -207,15 +211,21 @@
 		    <version>3.4.5</version>
 		</dependency>
 		
-				
+		<!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
+		<dependency>
+		    <groupId>org.mybatis.generator</groupId>
+		    <artifactId>mybatis-generator-core</artifactId>
+		    <version>1.3.5</version>
+		</dependency>
+		
 		
   	</dependencies>
 
   </dependencyManagement>
   
   
-  <modules>
-  	<module>spring_web_xml_config_demo</module>
-  	<module>spring_web_java_config_demo</module>
-</modules>
+	  <modules>
+	  	<module>spring_web_xml_config_demo</module>
+	  	<module>spring_web_java_config_demo</module>
+	 </modules>
 </project>
